@@ -4,6 +4,8 @@ This is a simple video player program that allows you to play local video files 
 ---
 ## Screenshots
 ![screenshot1](1.png)
+![screenshot2](2.png)
+![screenshot3](3.png)
 
 ---
 ## Requirements
