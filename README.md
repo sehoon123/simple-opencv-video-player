@@ -19,7 +19,7 @@ This is a simple video player program that allows you to play local video files 
 1. Use the following controls to operate the video player:
   * Space: play/pause
   * Tab: reset playback speed to 1x
-  * > or .: increase playback speed
+  * \> or .: increase playback speed
   * < or ,: decrease playback speed
   * ] or }: skip 10 frames forward
   * [ or {: skip 10 frames backward

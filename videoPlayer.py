@@ -2,22 +2,34 @@ import cv2 as cv
 import urllib.request
 import ssl
 import numpy as np
+from pytube import YouTube
+
+def download_youtube_video(youtube_url):
+    yt = YouTube(youtube_url)
+    stream = yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
+    stream.download()
+    video_file = stream.default_filename
+    return video_file
+
 
 
 # Define a function to play videos
 def play_video(video_file):
     # Check if video file is a URL
     if video_file.startswith('http://') or video_file.startswith('https://'):
-        # Create a custom SSL context that does not verify the certificate
-        ssl_context = ssl.create_default_context()
-        ssl_context.check_hostname = False
-        ssl_context.verify_mode = ssl.CERT_NONE
+        if 'youtube.com' in video_file or 'youtu.be' in video_file:
+            video_file = download_youtube_video(video_file)
+        else:
+            # Create a custom SSL context that does not verify the certificate
+            ssl_context = ssl.create_default_context()
+            ssl_context.check_hostname = False
+            ssl_context.verify_mode = ssl.CERT_NONE
 
-        # Download the video file and save it to a temporary file
-        with urllib.request.urlopen(video_file, context=ssl_context) as response:
-            with open('temp.mp4', 'wb') as f:
-                f.write(response.read())
-        video_file = 'temp.mp4'
+            # Download the video file and save it to a temporary file
+            with urllib.request.urlopen(video_file, context=ssl_context) as response:
+                with open('temp.mp4', 'wb') as f:
+                    f.write(response.read())
+            video_file = 'temp.mp4'
 
     # Read the given video file
     cap = cv.VideoCapture(video_file)
@@ -93,5 +105,5 @@ video_file = 'MVI_2350.mov'
 # play_video(video_file)
 
 # Test the function with a URL
-url = 'https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4'
+url = 'https://youtu.be/rVXqdeaH9-E'
 play_video(url)
