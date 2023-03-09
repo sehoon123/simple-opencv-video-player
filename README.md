@@ -35,9 +35,9 @@ This is a simple video player program that allows you to **play local video file
    * \> or . : increase playback speed
    * < or , : decrease playback speed
    * ] or } : skip 10 frames forward
-   * [ or { : skip 10 frames backward
+   * \[ or { : skip 10 frames backward
    * = : increase volume
-   * - : decrease volume
+   * \- : decrease volume
    * s : capture screen
    * Esc : exit the program
 1. If you press s to capture the screen, the captured frame will be saved to a file named capture_001.png, capture_002.png, and so on.
