@@ -1,10 +1,15 @@
 # Video Player
-This is a simple video player program that allows you to play local video files or videos from URLs. It has basic playback controls, such as play/pause, speed adjustment, and volume control. It also has a screen capture function to capture frames from the video.
+This is a simple video player program that allows you to <u>play local video files or videos from URLs.</u> It has basic playback controls, such as play/pause, speed adjustment, and volume control. It also has a <u>screen capture</u> function to capture frames from the video.
 
 ---
 ## Screenshots
+* volume control
 ![screenshot1](1.png)
+
+* capture frame
 ![screenshot2](2.png)
+
+* saved directory
 ![screenshot3](3.png)
 
 ---
