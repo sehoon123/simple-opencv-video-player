@@ -13,6 +13,9 @@ This is a simple video player program that allows you to **play local video file
 * saved directory
 ![screenshot3](3.png)
 
+* youtube streaming(download)
+![screenshot4](4.png)
+
 ---
 ## Requirements
 * Python 3.x
