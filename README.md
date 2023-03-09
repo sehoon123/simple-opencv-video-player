@@ -3,7 +3,8 @@ This is a simple video player program that allows you to play local video files 
 
 ---
 ## Screenshots
-![screenshot1]
+![screenshot1](1.png)
+
 ---
 ## Requirements
 * Python 3.x
