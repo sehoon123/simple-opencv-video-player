@@ -75,7 +75,7 @@ def play_video(video_file):
             if ret:
                 # Save the captured frame to a file
                 frame_number = int(cap.get(cv.CAP_PROP_POS_FRAMES))
-                filename = f"capture_{frame_number:03}.png"
+                filename = f"caputres/capture_{frame_number:03}.png"
                 success = cv.imwrite(filename, frame)
                 if success:
                     print(f"Screen captured to {filename}")
