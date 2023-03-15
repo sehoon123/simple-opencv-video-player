@@ -34,7 +34,7 @@ This is a simple video player program that allows you to **play local video file
   * \> or .: increase playback speed
   * < or ,: decrease playback speed
   * ] or }: skip 10 frames forward
-  * [ or {: skip 10 frames backward
+  * \[ or {: skip 10 frames backward
   * =: increase volume
   * -: decrease volume
   * s: capture screen
