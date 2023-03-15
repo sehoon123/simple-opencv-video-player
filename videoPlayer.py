@@ -56,6 +56,15 @@ def play_video(video_file):
         cv.putText(img, info, (10, 25), cv.FONT_HERSHEY_DUPLEX, 0.6, (0, 255, 0))
         cv.imshow('Video Player', img)
 
+        audio_bar_height = img.shape[0]
+        audio_bar_width = 20
+        audio_bar = np.zeros((audio_bar_height, audio_bar_width, 3), np.uint8)
+        audio_bar[:int((1-volume) * audio_bar_height), :] = (0,0,0)
+        audio_bar[int((1-volume) * audio_bar_height):, :] = (0,255,0)
+
+        combined_img = np.hstack((audio_bar, img))
+        cv.imshow('Video Player', combined_img)
+
         # Process the key event
         key = cv.waitKey(max(int(wait_msec / speed_table[speed_index]), 1))
         if key == ord(' '):
@@ -76,18 +85,18 @@ def play_video(video_file):
             volume = min(volume + 0.1, 1.0)
             audio = np.zeros((200,200,3), np.uint8)
             audio[:, :int(volume*200), :] = (0,255,0)
-            cv.imshow('Audio', audio)
+            # cv.imshow('Audio', audio)
         elif key == ord('-'):
             volume = max(volume - 0.1, 0.0)
             audio = np.zeros((200,200,3), np.uint8)
             audio[:, :int(volume*200), :] = (0,255,0)
-            cv.imshow('Audio', audio)
+            # cv.imshow('Audio', audio)
         elif key == ord('s'):  # Press 's' to capture screen
             ret, frame = cap.read()
             if ret:
                 # Save the captured frame to a file
                 frame_number = int(cap.get(cv.CAP_PROP_POS_FRAMES))
-                filename = f"caputres/capture_{frame_number:03}.png"
+                filename = f"captures/capture_{frame_number:03}.png"
                 success = cv.imwrite(filename, frame)
                 if success:
                     print(f"Screen captured to {filename}")
