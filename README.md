@@ -25,21 +25,21 @@ This is a simple video player program that allows you to **play local video file
 ---
 ## How to use
 1. Clone the repository or download the videoPlayer.py file.
-1. Open a terminal and navigate to the directory containing the videoPlayer.py file.
-1. Run the program with python videoPlayer.py.
-1. When prompted, enter the path to the local video file or the URL of the video you want to play.
-1. Use the following controls to operate the video player:
+2. Open a terminal and navigate to the directory containing the videoPlayer.py file.
+3. Run the program with python videoPlayer.py.
+4. When prompted, enter the path to the local video file or the URL of the video you want to play.
+5. Use the following controls to operate the video player:
   * Space: play/pause
   * Tab: reset playback speed to 1x
   * \> or .: increase playback speed
   * < or ,: decrease playback speed
   * ] or }: skip 10 frames forward
-  * [ or {: skip 10 frames backward
+  * \[ or {: skip 10 frames backward
   * =: increase volume
   * -: decrease volume
   * s: capture screen
-  * Esc: exit the program
-1. If you press s to capture the screen, the captured frame will be saved to a file named capture_001.png, capture_002.png, and so on.
+  * Esc: exit the program  
+6. If you press s to capture the screen, the captured frame will be saved to a file named capture_001.png, capture_002.png, and so on.
 
 ---
 ## Notes
