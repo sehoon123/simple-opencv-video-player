@@ -5,7 +5,7 @@ This is a simple video player program that allows you to **play local video file
 ## Screenshots
 
 * volume control
-![screenshot2](5.png)
+![screenshot2](5.PNG)
 
 * capture frame
 ![screenshot1](1.png)
